@@ -13,9 +13,12 @@ public class MyThread extends Thread{
 		// TODO Auto-generated method stub
 		MyThread thread= new MyThread();
 		MyThread2 thread2= new MyThread2();
+		thread.setPriority(MAX_PRIORITY);
+		thread2.setPriority(MIN_PRIORITY);
+		thread.start();	
+		
+		thread.sleep(1000);
 		thread2.start();
-//		thread.sleep(1000);
-		thread.start();		
 	}
 }
 
